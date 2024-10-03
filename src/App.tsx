@@ -1,8 +1,8 @@
 import "./App.css";
-import { Home } from "./pages";
+import { Editor } from "./pages";
 
 function App() {
-  return <Home />;
+  return <Editor />;
 }
 
 export default App;
