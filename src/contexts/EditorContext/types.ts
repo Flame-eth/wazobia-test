@@ -24,9 +24,9 @@ export interface EditorContextType {
   updateImage: (imageUrl: string) => void;
   updateVideoEmbed: (embed: VideoEmbed) => void;
   updateSocialEmbed: (embed: SocialEmbed) => void;
-  insertImageInContent: (imageUrl: string) => void; // New
-  insertVideoInContent: (videoEmbed: VideoEmbed) => void; // New
-  insertSocialEmbedInContent: (socialEmbed: SocialEmbed) => void; // New
+  insertImageInContent: (imageUrl: string) => void; 
+  insertVideoInContent: (videoEmbed: VideoEmbed) => void; 
+  insertSocialEmbedInContent: (socialEmbed: SocialEmbed) => void;
   resetEditor: () => void;
 }
 
