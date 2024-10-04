@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import {
   Dialog,
   DialogClose,
@@ -31,7 +31,8 @@ import { socialEmbedSchema } from "@/constants";
 import { useEditorContext } from "@/contexts";
 
 const ImageEmbed: FC = () => {
-  const { updateSocialEmbed } = useEditorContext();
+  const { insertSocialEmbedInContent } = useEditorContext();
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const form = useForm<z.infer<typeof socialEmbedSchema>>({
     resolver: zodResolver(socialEmbedSchema),
@@ -45,12 +46,13 @@ const ImageEmbed: FC = () => {
 
   function onSubmit(values: z.infer<typeof socialEmbedSchema>) {
     console.log(values);
-    updateSocialEmbed({
+    insertSocialEmbedInContent({
       ...values,
     });
+    setIsOpen(false);
   }
   return (
-    <Dialog>
+    <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>
         <div className=" flex gap-2 items-start bg-white cursor-pointer hover:bg-[#E7F1E9] p-3">
           <Share2 size={20} />
@@ -80,8 +82,10 @@ const ImageEmbed: FC = () => {
                 control={form.control}
                 name="platform"
                 render={({ field }) => (
-                  <FormItem >
-                    <FormLabel className="font-light text-[#333333] font-OpenSans uppercase text-xs">Social Media Platform</FormLabel>
+                  <FormItem>
+                    <FormLabel className="font-light text-[#333333] font-OpenSans uppercase text-xs">
+                      Social Media Platform
+                    </FormLabel>
                     <Select
                       onValueChange={field.onChange}
                       defaultValue={field.value}
@@ -108,7 +112,10 @@ const ImageEmbed: FC = () => {
                 name="url"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="font-light text-[#333333] font-OpenSans uppercase text-xs"> URL</FormLabel>
+                    <FormLabel className="font-light text-[#333333] font-OpenSans uppercase text-xs">
+                      {" "}
+                      URL
+                    </FormLabel>
                     <FormControl>
                       <Input
                         placeholder="https://www.faceboom.com/p/XXXXXXX/"
@@ -125,7 +132,10 @@ const ImageEmbed: FC = () => {
                 name="embedCode"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="font-light text-[#333333] font-OpenSans uppercase text-xs"> Code</FormLabel>
+                    <FormLabel className="font-light text-[#333333] font-OpenSans uppercase text-xs">
+                      {" "}
+                      Code
+                    </FormLabel>
                     <FormControl>
                       <Input
                         placeholder="Paste the embed code provided by the social media platform here"

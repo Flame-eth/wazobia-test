@@ -15,7 +15,7 @@ const ImageEmbed: FC = () => {
   const [imagePreview, setImagePreview] = useState<string | null>(null);
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const { updateImage } = useEditorContext();
+  const { insertImageInContent } = useEditorContext();
 
   const { toast } = useToast();
 
@@ -39,7 +39,7 @@ const ImageEmbed: FC = () => {
         description: "You need to select a valid image file before submitting.",
       });
     }
-    updateImage(imagePreview);
+    insertImageInContent(imagePreview);
     setImagePreview(null)
     setIsOpen(false);
   }

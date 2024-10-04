@@ -31,7 +31,7 @@ import { videoEmbedSchema } from "@/constants";
 
 const VideoEmbed: FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const { updateVideoEmbed } = useEditorContext();
+  const { insertVideoInContent } = useEditorContext();
 
   const form = useForm<z.infer<typeof videoEmbedSchema>>({
     resolver: zodResolver(videoEmbedSchema),
@@ -43,7 +43,7 @@ const VideoEmbed: FC = () => {
 
   function onSubmit(values: z.infer<typeof videoEmbedSchema>) {
     // console.log(values);
-    updateVideoEmbed({
+    insertVideoInContent({
       ...values,
     });
     setIsOpen(false);
