@@ -1,0 +1,83 @@
+.ql-toolbar {
+  border: 1px solid #e5e5e5;
+  background-color: #f9fafb;
+  display: flex;
+  /* justify-content: space-between; */
+  justify-items: center;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.ql-toolbar .ql-formats {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* Styling individual toolbar icons */
+.ql-header .ql-picker-label,
+.ql-align .ql-picker-label,
+.ql-bold,
+.ql-italic,
+.ql-link,
+.ql-image,
+.ql-list {
+  border: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.ql-toolbar .ql-picker-label {
+  padding: 5px;
+  border-radius: 4px;
+  background: none;
+}
+
+.ql-toolbar .ql-picker-label:hover,
+.ql-toolbar button:hover {
+  background-color: #f1f1f1;
+}
+
+.ql-toolbar button {
+  border: none;
+  padding: 5px;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.ql-toolbar button.ql-active {
+  background-color: #e0e0e0;
+}
+
+.ql-toolbar .ql-picker {
+  padding: 5px;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+/* Adjust text alignment icons */
+.ql-align .ql-picker-options {
+  padding: 5px;
+  border-radius: 4px;
+  border: none;
+  background-color: #fff;
+}
+
+.ql-align .ql-picker-item {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+/* Matching the spacing and icon size */
+.ql-toolbar button,
+.ql-toolbar .ql-picker-label {
+  padding: 8px 10px;
+}
+
+.ql-toolbar {
+  padding: 10px 15px;
+}
+
+.ql-container {
+  min-height: 200px;
+}
