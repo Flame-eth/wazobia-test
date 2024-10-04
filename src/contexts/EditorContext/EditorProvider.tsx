@@ -34,6 +34,29 @@ const EditorProvider: React.FC<EditorProviderProps> = ({ children }) => {
     setEditorState((prev) => ({ ...prev, socialEmbed: embed }));
   }, []);
 
+  const insertImageInContent = useCallback((imageUrl: string) => {
+    const imageEmbed = `<img src="${imageUrl}" alt="Embedded Image" />`;
+    setEditorState((prevState) => ({
+      ...prevState,
+      content: prevState.content + imageEmbed, // Append image HTML to content
+    }));
+  }, []);
+
+  const insertVideoInContent = useCallback((videoEmbed: VideoEmbed) => {
+    const videoEmbedHTML = `<iframe src="${videoEmbed.url}" title="${videoEmbed.provider} Video"></iframe>`;
+    setEditorState((prevState) => ({
+      ...prevState,
+      content: prevState.content + videoEmbedHTML, // Append video HTML to content
+    }));
+  }, []);
+
+  const insertSocialEmbedInContent = useCallback((socialEmbed: SocialEmbed) => {
+    setEditorState((prevState) => ({
+      ...prevState,
+      content: prevState.content + socialEmbed.embedCode, // Append social embed HTML to content
+    }));
+  }, []);
+
   const resetEditor = useCallback(() => {
     setEditorState({
       title: "",
@@ -53,6 +76,9 @@ const EditorProvider: React.FC<EditorProviderProps> = ({ children }) => {
       updateVideoEmbed,
       updateSocialEmbed,
       resetEditor,
+      insertImageInContent,
+      insertVideoInContent,
+      insertSocialEmbedInContent,
     }),
     [
       editorState,
@@ -62,6 +88,9 @@ const EditorProvider: React.FC<EditorProviderProps> = ({ children }) => {
       updateVideoEmbed,
       updateSocialEmbed,
       resetEditor,
+      insertImageInContent,
+      insertVideoInContent,
+      insertSocialEmbedInContent,
     ]
   );
 

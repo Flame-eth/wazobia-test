@@ -10,12 +10,16 @@ const defaultEditorState: EditorContextType = {
     videoEmbed: null,
     socialEmbed: null,
   },
-  updateTitle: () => {},
-  updateContent: () => {},
-  updateImage: () => {},
-  updateVideoEmbed: () => {},
-  updateSocialEmbed: () => {},
-  resetEditor: () => {},
+  updateTitle: () => { },
+  updateContent: () => { },
+  updateImage: () => { },
+  updateVideoEmbed: () => { },
+  updateSocialEmbed: () => { },
+
+  resetEditor: () => { },
+  insertImageInContent: () => {},
+  insertVideoInContent: () => {},
+  insertSocialEmbedInContent: () => {}
 };
 
 const EditorContext = createContext<EditorContextType>(defaultEditorState);
