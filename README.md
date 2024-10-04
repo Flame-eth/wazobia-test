@@ -1,4 +1,3 @@
-
 # Mini Website Editor
 
 This project is a simple website editor that allows users to create content, embed images, videos, and social media posts dynamically. It uses `React`, `TypeScript`, `ReactQuill`, and `Context API` for state management, offering a clean and user-friendly interface for creating and editing web content.
@@ -7,7 +6,7 @@ This project is a simple website editor that allows users to create content, emb
 
 You can view the live version of this project here:
 
-[Live Demo](https://your-live-link-here.com)
+[Live Demo](https://wazobia-test-five.vercel.app/)
 
 ## Features
 
@@ -15,7 +14,7 @@ You can view the live version of this project here:
 - **Embed Options**: Users can embed videos, images, and social media posts directly into the content.
 - **Responsive Design**: The editor layout is responsive and works across multiple screen sizes.
 - **Context API**: The state of the editor (title, content, image, video, social embeds) is managed using the `React Context API` for a consistent global state.
-  
+
 ## Technologies Used
 
 - **React**: Frontend library for building user interfaces.
@@ -23,7 +22,7 @@ You can view the live version of this project here:
 - **ReactQuill**: For rich text editing functionality.
 - **Context API**: For state management across components.
 - **CSS/SCSS**: For styling the components.
-  
+
 ## Folder Structure
 
 ```
