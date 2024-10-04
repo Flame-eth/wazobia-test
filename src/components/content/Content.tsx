@@ -33,8 +33,8 @@ const Content: FC = () => {
           formats={quillFormats}
           onFocus={handleFocus}
           theme="snow"
-          placeholder="Write your content here..."
-          className=" text-gray-600 font-Poppins text-base font-medium leading-5"
+          placeholder="Add content"
+          className=" text-gray-600 font-Poppins text-lg font-medium leading-5"
         />
       )}
     </div>

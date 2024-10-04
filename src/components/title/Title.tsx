@@ -1,6 +1,6 @@
 import { useEditorContext } from "@/contexts";
 import { ChangeEvent, FC } from "react";
-import { Input } from "./ui/input";
+import { Input } from "../ui/input";
 
 const Title: FC = () => {
   const { editorState, updateTitle } = useEditorContext();

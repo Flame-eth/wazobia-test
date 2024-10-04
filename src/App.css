@@ -80,8 +80,6 @@
   min-height: 200px;
 } */
 
-
-
 /* Quill container */
 .quill {
   font-family: Arial, sans-serif;
@@ -89,21 +87,32 @@
 
 /* Toolbar container */
 .ql-toolbar.ql-snow {
-  border: 1px solid #ccc;
+  border: 1px solid white !important;
   box-sizing: border-box;
-  padding: 8px;
+  padding: 0px 8px !important;
+  min-height: 40px !important;
   border-radius: 4px 4px 0 0;
-  background-color: #f8f8f8;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  width: fit-content;
 }
 
 /* Toolbar buttons */
 .ql-toolbar.ql-snow .ql-formats {
-  margin-right: 15px;
+  padding-right: 10px;
+  height: 100% !important;
+  /* border-right: 1px solid #ccc; */
+}
+
+.ql-toolbar.ql-snow .ql-formats:not(:last-child) {
+  border-right: 1px solid #ccc;
 }
 
 .ql-toolbar.ql-snow button {
   width: 28px;
-  height: 28px;
+  height: 100%;
   padding: 3px 5px;
   border: 1px solid transparent;
   border-radius: 3px;
@@ -127,20 +136,27 @@
 
 /* Editor area */
 .ql-container.ql-snow {
-  border: 1px solid #ccc;
+  border: none !important;
   border-top: none;
   border-radius: 0 0 4px 4px;
-  height: 200px; /* Adjust as needed */
+  height: 400px; /* Adjust as needed */
 }
 
+.ql-editor {
+  font-size: 18px;
+  line-height: 1.5;
+}
 /* Placeholder text */
 .ql-editor.ql-blank::before {
   font-style: italic;
   color: #999;
 }
 
+
+
 /* Custom styles for specific buttons */
-.ql-snow .ql-bold, .ql-snow .ql-italic {
+.ql-snow .ql-bold,
+.ql-snow .ql-italic {
   font-weight: bold;
 }
 
