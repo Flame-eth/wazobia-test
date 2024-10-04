@@ -36,5 +36,5 @@ export const socialEmbedSchema = z.object({
   }),
   url: z.string().url("Please enter a valid URL."),
   embedCode: z.string().min(1, "Please enter the embed code."),
-  disableCaptions: z.boolean().default(false),
+  disableCaptions: z.boolean().default(true),
 })

@@ -139,7 +139,8 @@
   border: none !important;
   border-top: none;
   border-radius: 0 0 4px 4px;
-  height: 200px; /* Adjust as needed */
+  height: 300px; 
+  /* max-height: 300px; */
 }
 
 .ql-editor {
