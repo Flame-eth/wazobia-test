@@ -2,6 +2,8 @@ import { FC } from "react";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 import { Plus } from "lucide-react";
 import ImageEmbed from "./ImageEmbed";
+import VideoEmbed from "./VideoEmbed";
+import { SocialEmbed } from "..";
 
 const EmbedOptions: FC = () => {
   return (
@@ -17,8 +19,10 @@ const EmbedOptions: FC = () => {
         <h1 className=" p-3 font-light uppercase tracking-wider font-Poppins text-base">
           EMBEDS
         </h1>
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-2">
           <ImageEmbed />
+          <VideoEmbed />
+          <SocialEmbed />
         </div>
       </PopoverContent>
     </Popover>
