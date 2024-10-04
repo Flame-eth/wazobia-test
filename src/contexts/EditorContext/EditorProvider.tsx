@@ -43,11 +43,12 @@ const EditorProvider: React.FC<EditorProviderProps> = ({ children }) => {
   }, []);
 
   const insertVideoInContent = useCallback((videoEmbed: VideoEmbed) => {
-    const videoEmbedHTML = `<iframe width="100%" height="315" src="${videoEmbed.url}" title="${videoEmbed.provider} video" frameborder="0" allowfullscreen></iframe>`;
+    const videoEmbedData = `<iframe width="100%" height="315" src="${videoEmbed.url}" title="${videoEmbed.provider} video" frameborder="0" allowfullscreen></iframe>`;
+    console.log(videoEmbedData);
 
     setEditorState((prevState) => ({
       ...prevState,
-      content: prevState.content + videoEmbedHTML, // Append video HTML to content
+      content: prevState.content + videoEmbedData, // Append video HTML to content
     }));
   }, []);
 

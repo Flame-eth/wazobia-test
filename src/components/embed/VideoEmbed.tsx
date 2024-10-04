@@ -42,9 +42,7 @@ const VideoEmbed: FC = () => {
   });
 
   function onSubmit(values: z.infer<typeof videoEmbedSchema>) {
-    // console.log(values);
     insertVideoInContent({
-      // ...values,
       url: values.url,
       provider: values.provider,
     });
