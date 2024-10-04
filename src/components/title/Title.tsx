@@ -8,7 +8,7 @@ const Title: FC = () => {
     <Input
       placeholder="Add post title"
       value={editorState.title}
-      className="text-4xl pl-0 font-Poppins bg-transparent font-bold text-black placeholder:text-black/60 leading-10 outline-none border-none focus-visible:ring-transparent"
+      className="text-4xl pl-0 font-OpenSans bg-transparent font-bold text-black placeholder:text-black/60 leading-10 outline-none border-none focus-visible:ring-transparent"
       onChange={(e: ChangeEvent<HTMLInputElement>) => {
         e.preventDefault();
         if (e.target.value?.length >= 100) {

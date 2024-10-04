@@ -7,7 +7,7 @@ export default {
   ],
   theme: {
     fontFamily: {
-      Poppins: ["Poppins", "sans-serif"],
+      OpenSans: ["Open Sans", "sans-serif"],
     },
   	extend: {
   		borderRadius: {
@@ -55,7 +55,10 @@ export default {
   				'3': 'hsl(var(--chart-3))',
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
-  			}
+  			},
+        primary_green: "#0A7227",
+        secondary_green: "#6CAA7D",
+        white_shade: "#FAFAFA"
   		}
   	}
   },

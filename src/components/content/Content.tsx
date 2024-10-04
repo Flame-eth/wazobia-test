@@ -13,13 +13,12 @@ const Content: FC = () => {
     setIsFocused(true);
   };
 
-  
   return (
     <div className="">
       {!isFocused && !editorState.content.length ? (
         <p
           onClick={() => handleFocus()}
-          className=" text-gray-300 font-Poppins text-base font-light leading-5"
+          className=" text-gray-300 font-OpenSans text-base font-light leading-5"
         >
           Add content
         </p>
@@ -34,7 +33,7 @@ const Content: FC = () => {
           onFocus={handleFocus}
           theme="snow"
           placeholder="Add content"
-          className=" text-gray-600 font-Poppins text-lg font-medium leading-5"
+          className=" text-gray-600 font-OpenSans text-lg font-medium leading-5"
         />
       )}
     </div>

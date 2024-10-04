@@ -40,6 +40,7 @@ const ImageEmbed: FC = () => {
       });
     }
     updateImage(imagePreview);
+    setImagePreview(null)
     setIsOpen(false);
   }
 
