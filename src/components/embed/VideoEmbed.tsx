@@ -44,7 +44,9 @@ const VideoEmbed: FC = () => {
   function onSubmit(values: z.infer<typeof videoEmbedSchema>) {
     // console.log(values);
     insertVideoInContent({
-      ...values,
+      // ...values,
+      url: values.url,
+      provider: values.provider,
     });
     setIsOpen(false);
   }
@@ -81,7 +83,9 @@ const VideoEmbed: FC = () => {
                 name="provider"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="font-light text-[#333333] font-OpenSans uppercase text-xs">Video Provider</FormLabel>
+                    <FormLabel className="font-light text-[#333333] font-OpenSans uppercase text-xs">
+                      Video Provider
+                    </FormLabel>
                     <Select
                       onValueChange={field.onChange}
                       defaultValue={field.value}
@@ -105,7 +109,9 @@ const VideoEmbed: FC = () => {
                 name="url"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="font-light text-[#333333] font-OpenSans uppercase text-xs">Video URL</FormLabel>
+                    <FormLabel className="font-light text-[#333333] font-OpenSans uppercase text-xs">
+                      Video URL
+                    </FormLabel>
                     <FormControl>
                       <Input
                         placeholder="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
