@@ -16,7 +16,7 @@ const EmbedOptions: FC = () => {
         align="start"
         className=" flex flex-col justify-start bg-white rounded-md p-0 "
       >
-        <h1 className=" p-3 font-light uppercase tracking-wider font-Poppins text-base">
+        <h1 className=" p-3 font-light uppercase tracking-wider font-OpenSans text-base">
           EMBEDS
         </h1>
         <div className="flex flex-col gap-2">
