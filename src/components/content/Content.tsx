@@ -1,5 +1,6 @@
 import { quillFormats, quillModules } from "@/constants";
 import { useEditorContext } from "@/contexts";
+import { stripHtml } from "@/utils";
 import { FC, useState } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
@@ -26,6 +27,7 @@ const Content: FC = () => {
         <ReactQuill
           value={editorState.content}
           onChange={(e: string) => {
+            if (stripHtml(e).length > 1000) return;
             updateContent(e);
           }}
           modules={quillModules}
