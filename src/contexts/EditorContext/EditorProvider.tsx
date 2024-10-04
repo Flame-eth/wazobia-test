@@ -35,7 +35,7 @@ const EditorProvider: React.FC<EditorProviderProps> = ({ children }) => {
   }, []);
 
   const insertImageInContent = useCallback((imageUrl: string) => {
-    const imageEmbed = `<img src="${imageUrl}" alt="Embedded Image" />`;
+    const imageEmbed = `<img src="${imageUrl}"  class=" w-full max-w-md h-[400px] object-contain" />`;
     setEditorState((prevState) => ({
       ...prevState,
       content: prevState.content + imageEmbed, // Append image HTML to content
@@ -43,7 +43,9 @@ const EditorProvider: React.FC<EditorProviderProps> = ({ children }) => {
   }, []);
 
   const insertVideoInContent = useCallback((videoEmbed: VideoEmbed) => {
-    const videoEmbedHTML = `<iframe src="${videoEmbed.url}" title="${videoEmbed.provider} Video"></iframe>`;
+    const videoEmbedHTML = `<iframe width="100%" height="315" src="${videoEmbed.url}" title="${videoEmbed.provider} video" frameborder="0" allowfullscreen></iframe>`;
+    // const videoEmbedHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/ENCOEBGwqzw?si=XWMAmag_RXRBeLjw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+
     setEditorState((prevState) => ({
       ...prevState,
       content: prevState.content + videoEmbedHTML, // Append video HTML to content
