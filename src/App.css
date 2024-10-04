@@ -1,11 +1,12 @@
-.ql-toolbar {
+/* .ql-toolbar {
   border: 1px solid #e5e5e5;
-  background-color: #f9fafb;
+  background-color: white;
+  box-shadow: white 0 10px 0 !important;
   display: flex;
-  /* justify-content: space-between; */
   justify-items: center;
   padding: 5px;
-  border-radius: 5px;
+  border: 2px solid #f1f1f1 !important;
+  border-radius: 5px !important;
 }
 
 .ql-toolbar .ql-formats {
@@ -14,7 +15,6 @@
   align-items: center;
 }
 
-/* Styling individual toolbar icons */
 .ql-header .ql-picker-label,
 .ql-align .ql-picker-label,
 .ql-bold,
@@ -55,7 +55,6 @@
   margin-right: 5px;
 }
 
-/* Adjust text alignment icons */
 .ql-align .ql-picker-options {
   padding: 5px;
   border-radius: 4px;
@@ -68,7 +67,6 @@
   margin-right: 5px;
 }
 
-/* Matching the spacing and icon size */
 .ql-toolbar button,
 .ql-toolbar .ql-picker-label {
   padding: 8px 10px;
@@ -80,4 +78,85 @@
 
 .ql-container {
   min-height: 200px;
+} */
+
+
+
+/* Quill container */
+.quill {
+  font-family: Arial, sans-serif;
+}
+
+/* Toolbar container */
+.ql-toolbar.ql-snow {
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  padding: 8px;
+  border-radius: 4px 4px 0 0;
+  background-color: #f8f8f8;
+}
+
+/* Toolbar buttons */
+.ql-toolbar.ql-snow .ql-formats {
+  margin-right: 15px;
+}
+
+.ql-toolbar.ql-snow button {
+  width: 28px;
+  height: 28px;
+  padding: 3px 5px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.ql-toolbar.ql-snow button:hover {
+  background-color: #e6e6e6;
+}
+
+/* Dropdown (for paragraph style) */
+.ql-toolbar.ql-snow .ql-picker.ql-header {
+  width: auto;
+}
+
+.ql-toolbar.ql-snow .ql-picker-label {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 3px 25px 3px 5px;
+}
+
+/* Editor area */
+.ql-container.ql-snow {
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  height: 200px; /* Adjust as needed */
+}
+
+/* Placeholder text */
+.ql-editor.ql-blank::before {
+  font-style: italic;
+  color: #999;
+}
+
+/* Custom styles for specific buttons */
+.ql-snow .ql-bold, .ql-snow .ql-italic {
+  font-weight: bold;
+}
+
+.ql-snow .ql-italic {
+  font-style: italic;
+}
+
+/* Adjust icon positions */
+.ql-snow .ql-picker-label::before,
+.ql-snow .ql-color .ql-picker-label svg,
+.ql-snow .ql-icon-picker .ql-picker-label svg {
+  vertical-align: middle;
+}
+
+/* Ensure consistent button sizes */
+.ql-formats button,
+.ql-formats .ql-picker {
+  margin-bottom: 5px;
 }

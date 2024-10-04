@@ -13,14 +13,9 @@ const Content: FC = () => {
     setIsFocused(true);
   };
 
-  const handleBlur = () => {
-    // Hide the toolbar if there's no content
-    if (!editorState.content.trim()) {
-      setIsFocused(false);
-    }
-  };
+  
   return (
-    <div className="editor-container">
+    <div className="">
       {!isFocused && !editorState.content.length ? (
         <p
           onClick={() => handleFocus()}
@@ -37,8 +32,9 @@ const Content: FC = () => {
           modules={quillModules}
           formats={quillFormats}
           onFocus={handleFocus}
-          onBlur={handleBlur}
+          theme="snow"
           placeholder="Write your content here..."
+          className=" text-gray-600 font-Poppins text-base font-medium leading-5"
         />
       )}
     </div>
