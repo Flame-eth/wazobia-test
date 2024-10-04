@@ -64,3 +64,12 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .aspect-w-16 {
+    aspect-ratio: 16 / 9;
+  }
+  .aspect-h-9 {
+    aspect-ratio: 16 / 9;
+  }
+}
